@@ -1,24 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Elegant Background Video</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <meta charset="UTF-8">
+  <title>Auto Background Video</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .video-container {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .video-container video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .overlay-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      top: 40%;
+      color: white;
+      padding: 20px;
+    }
+
+    .overlay-content h1 {
+      font-size: 3rem;
+    }
+
+    .overlay-content p {
+      font-size: 1.2rem;
+    }
+  </style>
 </head>
 <body>
 
-  <div id="preloader">
-    <img src="assets/loader.gif" alt="Loading...">
+  <div class="video-container">
+    <video autoplay loop muted playsinline>
+      <source src="https://videos.pexels.com/video-files/856107/856107-hd_1280_720_30fps.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay-content">
+      <h1>Welcome to My Web Dev Project</h1>
+      <p>Responsive | Fast | Creative</p>
+    </div>
   </div>
 
-  <div class="video-container">
-    <video id="bg-video" autoplay muted loop>
-      <source src="video/background.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-    <div class="content">
+</body>
+</html>
+
       <h1>Sahand Ghavidel</h1>
       <button id="video-control">
         <i class="fas fa-pause"></i>
