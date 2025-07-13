@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elegant Background Video</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <div id="preloader">
+    <img src="assets/loader.gif" alt="Loading...">
+  </div>
+
+  <div class="video-container">
+    <video id="bg-video" autoplay muted loop>
+      <source src="video/background.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="content">
+      <h1>Sahand Ghavidel</h1>
+      <button id="video-control">
+        <i class="fas fa-pause"></i>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
